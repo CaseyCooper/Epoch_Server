@@ -48,10 +48,10 @@ enableSentences false;
 #include "\z\addons\dayz_code\configVariables.sqf" // Don't remove this line
 // See the above file for a full list including descriptions and default values
 // Uncomment the lines below to change the default loadout
-DefaultMagazines = ["ItemBandage","ItemPainkiller","8Rnd_9x18_Makarov","8Rnd_9x18_Makarov"];
-DefaultWeapons = ["Makarov_DZ","ItemMap"];
+DefaultMagazines = ["ItemBandage","ItemBandage","ItemPainkiller","ItemMorphine","FoodMRE","ItemSodaMdew","15Rnd_9x19_M9SD","15Rnd_9x19_M9SD"];
+DefaultWeapons = ["M9_SD_DZ","ItemMap","ItemToolbox","ItemCrowbar","ItemMatchbox","ItemCompass","ItemKnife"];
 DefaultBackpack = "DZ_Patrol_Pack_EP1";
-//DefaultBackpackItems = []; // Can include both weapons and magazines i.e. ["PDW_DZ","30Rnd_9x19_UZI"];
+DefaultBackpackItems = ["MeleeBaseBallBat"]; // Can include both weapons and magazines i.e. ["PDW_DZ","30Rnd_9x19_UZI"];
 dayz_paraSpawn = false; // Halo spawn
 DZE_BackpackAntiTheft = false; // Prevent stealing from backpacks in trader zones
 DZE_BuildOnRoads = false; // Allow building on roads
