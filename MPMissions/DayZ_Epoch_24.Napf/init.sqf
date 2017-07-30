@@ -133,6 +133,7 @@ if (_verCheck) then {
 };
 progressLoadingScreen 0.25;
 call compile preprocessFileLineNumbers "server_traders.sqf";
+call compile preprocessFileLineNumbers "logistic\init.sqf";
 call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\mission\napf.sqf"; //Add trader city objects locally on every machine early
 if (dayz_POIs && (toLower worldName == "chernarus")) then {call compile preprocessFileLineNumbers "\z\addons\dayz_code\system\mission\chernarus\poi\init.sqf";}; //Add POI objects locally on every machine early
 initialized = true;
