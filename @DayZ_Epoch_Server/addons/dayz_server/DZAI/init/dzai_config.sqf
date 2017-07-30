@@ -82,7 +82,7 @@ DZAI_lastManStanding = false;
 --------------------------------------------------------------------------------------------------------------------*/	
 
 //Enable to use client-side radio addon for radio messages instead of remote execution method. (Default: false)
-DZAI_clientRadio = true;
+DZAI_clientRadio = false;
 
 //Enable or disable AI hostility to zombies. If enabled, AI units spawned by DZAI will attack nearby zombies. (Default: false)
 DZAI_zombieEnemy = false;	
@@ -91,7 +91,7 @@ DZAI_zombieEnemy = false;
 DZAI_zDetectRange = 150;
 
 //Enable or disable AI death messages. Messages will be sent only to player responsible for killing the unit. Messages will be sent in System chat in the format "(Unit name) was killed." (Default: false)
-DZAI_deathMessages = true;									
+DZAI_deathMessages = false;									
 
 
 /*	Static AI Spawning Settings
@@ -168,7 +168,7 @@ DZAI_randAreaBlacklist = [];
 --------------------------------------------------------------------------------------------------------------------*/		
 
 //Global maximum number of active AI air vehicle patrols. Set at 0 to disable (Default: 0).							
-DZAI_maxHeliPatrols = 10;
+DZAI_maxHeliPatrols = 5;
 
 //Set minimum and maximum wait time in seconds to respawn an AI vehicle patrol after vehicle is destroyed or disabled. (Default: Min 600, Max 900).
 DZAI_respawnTMinA = 600;
@@ -178,8 +178,7 @@ DZAI_respawnTMaxA = 900;
 DZAI_heliList = [
 	["UH1H_DZ",2],
 	["Mi17_DZ",3],
-	["CH_47F_BAF",2],
-	["UH60M_EP1	",3]
+	["UH60M_EP1	",1]
 ];
 
 //Difficulty level of air vehicle patrol units. Difficulty level also affects unit loadout and loot. Possible values: 0 to 3 (Default: 3)
@@ -204,7 +203,7 @@ DZAI_airWeapons = [
 --------------------------------------------------------------------------------------------------------------------*/	
 
 //Global maximum number of active AI land vehicle patrols. Set at 0 to disable (Default: 0).	
-DZAI_maxLandPatrols = 15;
+DZAI_maxLandPatrols = 8;
 
 //Set minimum and maximum wait time in seconds to respawn an AI vehicle patrol after vehicle is destroyed or disabled. (Default: Min 600, Max 900).
 DZAI_respawnTMinL = 600;
@@ -213,19 +212,19 @@ DZAI_respawnTMaxL = 900;
 //Classnames of land vehicle types to use, with the maximum amount of each type to spawn.
 DZAI_vehList = [
 	["Offroad_DSHKM_Gue",5],
-	["BTR40_MG_TK_GUE_EP1",5],
+	["BTR40_MG_TK_GUE_EP1",1],
 	["UAZ_MG_TK_EP1",5],
 	["LandRover_MG_TK_EP1",5]
 ];
 
 //Difficulty level of land vehicle patrol units. Difficulty level also affects unit loadout and loot. Possible values: 0 to 3 (Default: 3)
-DZAI_vehUnitLevel = 3;
+DZAI_vehUnitLevel = 1;
 
 //Maximum number of gunner units per land vehicle. Limited by actual number of available gunner positions. (Default: 1)
 DZAI_vehGunnerUnits = 2;
 
 //Maximum number of cargo units per land vehicle. Limited by actual number of available cargo positions. (Default: 3)
-DZAI_vehCargoUnits = 3;
+DZAI_vehCargoUnits = 2;
 
 
 /*	AI Vehicle (Air & Land) Settings
@@ -256,7 +255,7 @@ DZAI_banAIWeapons = [];
 //List of launcher-type weapons for mid/high-level AI to use (by default, weapongrade 1/2/3), example: ["M136"]. If left empty, AI will not use launcher weapons. (Default: [])
 //If AI encounter an armored player vehicle, they will switch to a randomly-selected launcher-type weapon to engage.
 //Weapon classnames added here are verified if DZAI_verifyTables is set to true. Note: Launcher weapons are removed from the AI unit upon death.
-DZAI_launcherTypes = ["RPG18","RPG7V","Javelin","Stinger"];	
+DZAI_launcherTypes = [];	
 
 //List of AI weapongrades that are permitted to use launcher-type weapons. Individual custom weapongrade levels may be added to allow launcher use (Default: [1,2,3])
 DZAI_launcherLevels = [1,2,3];								
@@ -269,13 +268,13 @@ DZAI_launchersPerGroup = 1;
 --------------------------------------------------------------------------------------------------------------------*/
 
 //Number of selections of medical items (Inventory)
-DZAI_invmedicals = 1;
+DZAI_invmedicals = 2;
 
 //Number of selections of edible items (Inventory) 										
-DZAI_invedibles = 1;	
+DZAI_invedibles = 2;	
 
 //Number of selections of medical items (Backpack)									
-DZAI_bpmedicals = 1; 	
+DZAI_bpmedicals = 2; 	
 
 //Number of selections of edible items (Backpack)									
 DZAI_bpedibles = 1;	
@@ -284,7 +283,7 @@ DZAI_bpedibles = 1;
 DZAI_numMiscItemS = 3;						
 
 //Maximum number of items to select from DZAI_MiscItemL table.				
-DZAI_numMiscItemL = 1;										
+DZAI_numMiscItemL = 2;										
 
 
 /*	AI loot probability settings
@@ -300,17 +299,17 @@ DZAI_chanceEdibles = 0.70;
 DZAI_chanceMiscItemS = 0.60;
 
 //Chance to add each random item from DZAI_MiscItemL table.								
-DZAI_chanceMiscItemL = 0.15;								
+DZAI_chanceMiscItemL = 0.25;								
 
 
 /*AI weapon/skill probabilities (gradeChances should add up to 1.00) - [Civilian, Military, MilitarySpecial, HeliCrash] - Note: AI with higher grade weaponry will also have higher skill settings.
 --------------------------------------------------------------------------------------------------------------------*/
 
 //equipType level 0 - most AI will have basic pistols or rifles, and occasionally common military weapons.
-DZAI_gradeChances0 = [0.90,0.10,0.00,0.00];	
+DZAI_gradeChances0 = [0.90,0.10,0.00,0.05];	
 
 //equipType level 1 - most AI will have common rifles, many will have common military weapons. Very rarely, AI will spawn with high-grade military or helicrash weapons.				
-DZAI_gradeChances1 = [0.65,0.30,0.04,0.01];	
+DZAI_gradeChances1 = [0.65,0.30,0.04,0.05];	
 
 //equipType level 2 - most AI carry military weapons, and occasionally high-grade military weapons.				
 DZAI_gradeChances2 = [0.15,0.65,0.15,0.05];

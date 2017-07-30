@@ -173,5 +173,4 @@ if (!isDedicated) then {
 	3 fadeSound 1;
 	3 fadeMusic 1;
 	endLoadingScreen;
-	_nul = [] execVM "DZAI_Client\dzai_initclient.sqf";
 };

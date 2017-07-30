@@ -36,8 +36,8 @@ if(isServer) then {
 		ai_kills_gain				= true;			// add kill to bandit/human kill score
 		ai_humanity_gain			= true;			// gain humanity for killing AI
 		ai_add_humanity				= 25;			// amount of humanity gained for killing a bandit AI
-		ai_remove_humanity			= 50;			// amount of humanity lost for killing a hero AI
-		ai_special_humanity			= 150;			// amount of humanity gain or loss for killing a special AI dependant on player alignment
+		ai_remove_humanity			= 0;			// amount of humanity lost for killing a hero AI
+		ai_special_humanity			= 0;			// amount of humanity gain or loss for killing a special AI dependant on player alignment
 		
 		ai_skill_extreme			= [["aimingAccuracy",1.00],["aimingShake",1.00],["aimingSpeed",1.00],["endurance",1.00],["spotDistance",1.00],["spotTime",1.00],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",1.00]]; 	// Extreme
 		ai_skill_hard				= [["aimingAccuracy",0.80],["aimingShake",0.80],["aimingSpeed",0.80],["endurance",1.00],["spotDistance",0.80],["spotTime",0.80],["courage",1.00],["reloadSpeed",1.00],["commanding",1.00],["general",1.00]]; 	// Hard
@@ -120,7 +120,7 @@ if(isServer) then {
 
 		wai_mission_fuel			= [5,60];							// fuel inside mission spawned vehicles [min%,max%]
 		wai_vehicle_damage			= [20,70];							// damages to spawn vehicles with [min%,max%]
-		wai_keep_vehicles			= true;								// save vehicles to database and keep them after restart
+		wai_keep_vehicles			= false;								// save vehicles to database and keep them after restart
 		wai_linux_server			= false;							// false = Windows (HiveExt.dll)		true = Linux Server (writer.pl)		has no effect when "wai_keep_vehicles = false;"
 		wai_lock_vehicles			= true;								// lock mission vehicles and add keys to random AI bodies (be careful with ai_clean_dead if this is true
 
@@ -133,7 +133,7 @@ if(isServer) then {
 		wai_kill_percent			= 30;								// percentage of AI players that must be killed at "crate" missions to be able to trigger completion
 
 		wai_high_value				= true;								// enable the possibility of finding a high value item (defined below crate_items_high_value) inside a crate
-		wai_high_value_chance		= 1;								// chance in percent you find above mentioned item
+		wai_high_value_chance		= 15;								// chance in percent you find above mentioned item
 
 		wai_enable_minefield		= true;								// enable minefields to better defend missions
 		wai_use_launchers			= true;								// add a rocket launcher to each spawned AI group
@@ -142,20 +142,20 @@ if(isServer) then {
 		// Missions
 		wai_radio_announce			= true;								// Setting this to true will announce the missions to those that hold a radio only
 		wai_hero_limit				= 0;								// define how many hero missions can run at once
-		wai_bandit_limit			= 1;								// define how many bandit missions can run at once
+		wai_bandit_limit			= 3;								// define how many bandit missions can run at once
 
 		wai_hero_missions			= [ 								// ["mission filename",% chance of picking this mission],Make sure the chances add up to 100,or it will not be accurate percentages
-										["patrol",10],
-										["black_hawk_crash",11],
-										["armed_vehicle",11],
-										["bandit_base",7],
-										["captured_mv22",6],
-										["ikea_convoy",7],
-										["destroyed_ural",10],
-										["disabled_milchopper",9],
-										["mayors_mansion",9],
-										["weapon_cache",10],
-										["bandit_patrol",10]
+										//["patrol",10],
+										//["black_hawk_crash",11],
+										//["armed_vehicle",11],
+										//["bandit_base",7],
+										//["captured_mv22",6],
+										//["ikea_convoy",7],
+										//["destroyed_ural",10],
+										//["disabled_milchopper",9],
+										//["mayors_mansion",9],
+										//["weapon_cache",10],
+										//["bandit_patrol",10]
 									];
 		wai_bandit_missions			= [
 										["patrol",10],
@@ -164,8 +164,8 @@ if(isServer) then {
 										["captured_mv22",6],
 										["broken_down_ural",12],
 										["hero_base",6],
-										["ikea_convoy",8],
-										["medi_camp",14],
+										["ikea_convoy",10],
+										["medi_camp",12],
 										["presidents_mansion",6],
 										["sniper_extraction",8],
 										["weapon_cache",10]
