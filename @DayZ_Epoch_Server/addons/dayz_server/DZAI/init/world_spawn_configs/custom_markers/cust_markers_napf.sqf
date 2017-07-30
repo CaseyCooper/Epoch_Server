@@ -26,3 +26,26 @@
 
 //----------------------------Add your custom markers below this line ----------------------------
 
+	_this = createMarker ["dzaiAISPAWN", [4672.376, 16637.514, -6.1035156e-005]];
+	_this setMarkerShape "ELLIPSE";
+	_this setMarkerType "Flag";
+	_this setMarkerBrush "Solid";
+	_this setMarkerSize [200, 200];
+	_this setMarkerAlpha 0;
+	_dzaiAISPAWN = _this;		//_dzaicustomspawntest must be a unique name
+	
+		_this = createMarker ["dzaiAISPAWN2", [4618.2852, 16597.203, -6.1035156e-005]];
+	_this setMarkerShape "ELLIPSE";
+	_this setMarkerType "Flag";
+	_this setMarkerBrush "Solid";
+	_this setMarkerSize [200, 200];
+	_this setMarkerAlpha 0;
+	_dzaiAISPAWN2 = _this;		//_dzaicustomspawntest must be a unique name
+	
+		_this = createMarker ["dzaiAISPAWN3", [4650.2603, 16744.162, -6.1035156e-005]];
+	_this setMarkerShape "ELLIPSE";
+	_this setMarkerType "Flag";
+	_this setMarkerBrush "Solid";
+	_this setMarkerSize [200, 200];
+	_this setMarkerAlpha 0;
+	_dzaiAISPAWN3 = _this;	
