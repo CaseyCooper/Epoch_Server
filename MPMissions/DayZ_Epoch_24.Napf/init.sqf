@@ -55,26 +55,46 @@ DefaultBackpack = "DZ_Patrol_Pack_EP1";
 dayz_paraSpawn = false; // Halo spawn
 DZE_BackpackAntiTheft = false; // Prevent stealing from backpacks in trader zones
 DZE_BuildOnRoads = false; // Allow building on roads
-DZE_PlayerZed = true; // Enable spawning as a player zombie when players die with infected status
-DZE_R3F_WEIGHT = true; // Enable R3F weight. Players carrying too much will be overburdened and forced to move slowly.
+DZE_PlayerZed = false; // Enable spawning as a player zombie when players die with infected status
+DZE_R3F_WEIGHT = false; // Enable R3F weight. Players carrying too much will be overburdened and forced to move slowly.
 DZE_slowZombies = false; // Force zombies to always walk
-DZE_StaticConstructionCount = 0; // Steps required to build. If greater than 0 this applies to all objects.
-DZE_GodModeBase = false; // Make player built base objects indestructible
-DZE_requireplot = 1; // Require a plot pole to build  0 = Off, 1 = On
+DZE_StaticConstructionCount = 1; // Steps required to build. If greater than 0 this applies to all objects.
+DZE_GodModeBase = true; // Make player built base objects indestructible
+DZE_requireplot = 0; // Require a plot pole to build  0 = Off, 1 = On
 DZE_PlotPole = [30,45]; // Radius owned by plot pole [Regular objects,Other plotpoles]. Difference between them is the minimum buffer between bases.
-DZE_BuildingLimit = 150; // Max number of built objects allowed in DZE_PlotPole radius
+DZE_BuildingLimit = 350; // Max number of built objects allowed in DZE_PlotPole radius
 DZE_SelfTransfuse = true; // Allow players to bloodbag themselves
 DZE_selfTransfuse_Values = [12000,15,120]; // [blood amount given, infection chance %, cooldown in seconds]
 MaxDynamicDebris = 500; // Max number of random road blocks to spawn around the map
-MaxVehicleLimit = 300; // Max number of random vehicles to spawn around the map
+MaxVehicleLimit = 450; // Max number of random vehicles to spawn around the map
 spawnArea = 1400; // Distance around markers to find a safe spawn position
 spawnShoremode = 1; // Random spawn locations  1 = on shores, 0 = inland
 EpochUseEvents = false; //Enable event scheduler. Define custom scripts in dayz_server\modules to run on a schedule.
+DZE_UI = "epoch"; //"vanilla","epoch","dark"  UI status icons style. Dark accommodates color blind people.
 dayz_groupSystem = true; // Enable group system
 dayz_markGroup = 1; // Players can see their group members on the map 0=never, 1=always, 2=With GPS only
 dayz_markSelf = 2; // Players can see their own position on the map 0=never, 1=always, 2=With GPS only
 dayz_markBody = 1; // Players can see their corpse position on the map 0=never, 1=always, 2=With GPS only
 dayz_requireRadio = false; // Require players to have a radio on their toolbelt to create a group, be in a group and receive invites.
+dayz_knifeDulling = true; // Enable knife dulling. Knives need to be sharpened after so many uses.
+dayz_matchboxCount = true; // Enable match stick count. After five uses matches run out and must be replaced.
+DZE_salvageLocked = false; //Enable or disable salvaging of locked vehicles, useful for stopping griefing on locked vehicles.
+DZE_ForceNameTagsInTrader = true; // Force name display when looking at player up close in traders. Overrides player choice.
+DZE_NameTags = 1; // Name displays when looking at player up close  0 = Off, 1= On, 2 = Player choice
+DZE_HumanityTargetDistance = 25; // Distance to show name tags (red for bandit, blue for hero, green for friend)
+DZE_DeathMsgChat = "none"; //"none","global","side","system" Display death messages in selected chat channel.
+DZE_DeathMsgDynamicText = true; // Display death messages as dynamicText in the top left with weapon icons.
+MaxAmmoBoxes = 5; // Max number of random Supply_Crate_DZE filled with vehicle ammo to spawn around the map
+MaxMineVeins = 100; // Max number of random mine veins to spawn around the map
+DZE_ConfigTrader = true; // Use config files for traders instead of database. Loads faster and uses less network traffic. False enables database traders with legacy trader menu.
+DZE_serverLogTrades = true; // Log trades to server RPT (sent with publicVariableServer on every trade)
+DZE_GemOccurance = [["ItemTopaz",10], ["ItemObsidian",8], ["ItemSapphire",6], ["ItemAmethyst",4], ["ItemEmerald",3], ["ItemCitrine",2], ["ItemRuby",1]]; //Sets how rare each gem is in the order shown when mining (whole numbers only)
+DZE_GemWorthArray = [["ItemTopaz",15000], ["ItemObsidian",20000], ["ItemSapphire",25000], ["ItemAmethyst",30000], ["ItemEmerald",35000], ["ItemCitrine",40000], ["ItemRuby",45000]]; // Array of gem prices, only works with config traders. Set DZE_GemWorthArray=[]; to disable return change in gems.
+DZE_SaleRequiresKey = false; // Require the player has the key for a vehicle in order to sell it. The key can be in the player's toolbelt, backpack, or the vehicle's inventory.
+DZE_TRADER_SPAWNMODE = false; // Vehicles purchased at traders will be parachuted in
+Z_VehicleDistance = 40; // Max distance a vehicle can be sold or accessed from at a trader.
+Z_AllowTakingMoneyFromBackpack = true; // Allow traders to take money from backpacks when buying with default currency.
+Z_AllowTakingMoneyFromVehicle = true; // Allow traders to take money from vehicles when buying with default currency.
 EpochEvents = [["any","any","any","any",30,"crash_spawner"],["any","any","any","any",0,"crash_spawner"],["any","any","any","any",15,"supply_drop"]];
 // EPOCH CONFIG VARIABLES END //
 
