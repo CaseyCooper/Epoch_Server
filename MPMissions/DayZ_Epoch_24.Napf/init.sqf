@@ -52,6 +52,7 @@ DefaultMagazines = ["ItemBandage","ItemBandage","ItemPainkiller","ItemMorphine",
 DefaultWeapons = ["M9_SD_DZ","ItemMap","ItemToolbox","ItemCrowbar","ItemMatchbox","ItemCompass","ItemKnife"];
 DefaultBackpack = "DZ_Patrol_Pack_EP1";
 DefaultBackpackItems = ["MeleeBaseBallBat"]; // Can include both weapons and magazines i.e. ["PDW_DZ","30Rnd_9x19_UZI"];
+DZE_MissionLootTable = true; //Custom Loot Tables
 dayz_paraSpawn = false; // Halo spawn
 DZE_BackpackAntiTheft = false; // Prevent stealing from backpacks in trader zones
 DZE_BuildOnRoads = false; // Allow building on roads
