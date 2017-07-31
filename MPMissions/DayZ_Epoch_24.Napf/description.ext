@@ -41,7 +41,7 @@ class CfgSounds
 			sound[] = {custom\remote\radio.ogg,0.4,1};
 			titles[] = {};
 		};
-	};	
+	};
 #include "\z\addons\dayz_code\gui\description.hpp"
-#include "dayz_code\Configs\CfgLoot\CfgLoot.hpp"
+#include "\z\addons\dayz_code\Configs\CfgLoot\CfgLoot.hpp"
 #include "custom\CfgServerTrader\CfgServerTrader.hpp"
