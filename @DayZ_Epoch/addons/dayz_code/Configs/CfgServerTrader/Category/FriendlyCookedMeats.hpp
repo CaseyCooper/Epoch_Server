@@ -41,8 +41,8 @@ class Category_630 {
 	};
 	class FishCookedTuna { // rarest
 		type = "trade_items";
-		buy[] = {4,"ItemGoldBar"};
-		sell[] = {1,"ItemGoldBar"};
+		buy[] = {4,"ItemGoldBar10oz"};
+		sell[] = {2,"ItemGoldBar10oz"};
 	};
 };
 
