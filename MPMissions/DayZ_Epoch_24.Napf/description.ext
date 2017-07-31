@@ -1,3 +1,4 @@
+#include "dayz_code\Configs\CfgLoot\CfgLoot.hpp"
 respawn = "BASE";
 respawnDelay = 0;
 respawnDialog = 0;
@@ -43,5 +44,8 @@ class CfgSounds
 		};
 	};
 #include "\z\addons\dayz_code\gui\description.hpp"
+<<<<<<< HEAD
 #include "\z\addons\dayz_code\Configs\CfgLoot\CfgLoot.hpp"
+=======
+>>>>>>> parent of b0b6e6e... Revert "test fix of loot tables"
 #include "custom\CfgServerTrader\CfgServerTrader.hpp"
