@@ -86,7 +86,7 @@ DZE_DeathMsgChat = "none"; //"none","global","side","system" Display death messa
 DZE_DeathMsgDynamicText = true; // Display death messages as dynamicText in the top left with weapon icons.
 MaxAmmoBoxes = 5; // Max number of random Supply_Crate_DZE filled with vehicle ammo to spawn around the map
 MaxMineVeins = 100; // Max number of random mine veins to spawn around the map
-DZE_ConfigTrader = true; // Use config files for traders instead of database. Loads faster and uses less network traffic. False enables database traders with legacy trader menu.
+DZE_ConfigTrader = false; // Use config files for traders instead of database. Loads faster and uses less network traffic. False enables database traders with legacy trader menu.
 DZE_serverLogTrades = true; // Log trades to server RPT (sent with publicVariableServer on every trade)
 DZE_GemOccurance = [["ItemTopaz",10], ["ItemObsidian",8], ["ItemSapphire",6], ["ItemAmethyst",4], ["ItemEmerald",3], ["ItemCitrine",2], ["ItemRuby",1]]; //Sets how rare each gem is in the order shown when mining (whole numbers only)
 DZE_GemWorthArray = [["ItemTopaz",15000], ["ItemObsidian",20000], ["ItemSapphire",25000], ["ItemAmethyst",30000], ["ItemEmerald",35000], ["ItemCitrine",40000], ["ItemRuby",45000]]; // Array of gem prices, only works with config traders. Set DZE_GemWorthArray=[]; to disable return change in gems.
