@@ -1,1 +1,1 @@
-#include "custom\CfgServerTrader\CfgServerTrader.hpp"
+#include "custom\CfgServerTrader\napf.sqf"
