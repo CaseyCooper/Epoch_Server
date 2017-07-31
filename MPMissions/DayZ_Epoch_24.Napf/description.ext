@@ -1,3 +1,4 @@
+#include "dayz_code\Configs\CfgLoot\CfgLoot.hpp"
 respawn = "BASE";
 respawnDelay = 0;
 respawnDialog = 0;
@@ -43,5 +44,4 @@ class CfgSounds
 		};
 	};	
 #include "\z\addons\dayz_code\gui\description.hpp"
-#include "dayz_code\Configs\CfgLoot\CfgLoot.hpp"
 #include "custom\CfgServerTrader\CfgServerTrader.hpp"
